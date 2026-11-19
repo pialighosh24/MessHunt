@@ -1,0 +1,39 @@
+{
+  "name": "mess-hunt-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mess Hunt backend API (Node.js, Express, MongoDB)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "start:local": "node src/server.js",
+    "dev:local": "node --watch src/server.js",
+    "seed:demo": "node src/seed/seedDemo.js",
+    "admin:create": "node src/seed/createAdmin.js",
+    "admin:init:local": "node src/local-demo/scripts/initAdmin.js",
+    "seed:local-demo": "node src/local-demo/scripts/seedDemo.js",
+    "reset:local-demo": "node src/local-demo/scripts/resetStore.js",
+    "test:phase3": "node tests/phase3-foundation.test.js"
+  },
+  "keywords": [
+    "mess-hunt",
+    "student-accommodation",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.11.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}

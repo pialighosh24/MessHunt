@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Mess Hunt",
+    "slug": "mess-hunt",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/brand/icon.png",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/brand/icon.png",
+        "backgroundColor": "#FFFDF8"
+      }
+    },
+    "web": {
+      "favicon": "./assets/brand/mess-hunt-logo.jpg"
+    },
+    "extra": {
+      "appDisplayName": "Mess Hunt",
+      "tagline": "Find Your Perfect Mess"
+    },
+    "plugins": [
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/brand/splash.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFDF8"
+        }
+      ],
+      "expo-secure-store"
+    ]
+  }
+}
