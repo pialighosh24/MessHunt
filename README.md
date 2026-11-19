@@ -163,9 +163,37 @@ You can also register new student/owner accounts via the mobile app or owner das
 - `docs/setup-and-demo.md` — additional setup/demo notes
 - `PROJECT_COMPLETION_AUDIT.md` — earlier baseline audit
 
+## Team Collaboration Workflow
+
+**Repository:** `https://github.com/pialighosh24/MessHunt` (public)
+
+### Branch strategy
+- `main` — stable project version. Only reviewed and tested changes should be merged here.
+- `develop` — team integration branch. Collaborators should normally submit work here through Pull Requests.
+- Suggested feature branch names: `feature/student-app`, `feature/owner-dashboard`, `feature/admin-dashboard`, `feature/backend`, `fix/<issue>`, `docs/<topic>`.
+
+### Contributor workflow
+1. **Clone** the repository: `git clone https://github.com/pialighosh24/MessHunt.git`
+2. **Checkout `develop`** and pull latest: `git checkout develop && git pull origin develop`
+3. **Create a feature branch** from `develop`: `git checkout -b feature/<your-task>`
+4. **Implement** your assigned changes in the appropriate app/folder.
+5. **Test** your changes locally (run relevant app/backend checks and verify behavior).
+6. **Commit** with a clear message: `git add <intended-files> && git commit -m "Describe change"`
+7. **Push** your feature branch: `git push -u origin feature/<your-task>`
+8. **Open a Pull Request** targeting `develop` on GitHub.
+9. **Review and address feedback**, then merge the approved PR into `develop`.
+10. **Merge tested `develop` into `main`** when ready for a stable/release checkpoint.
+
+### Resolving merge conflicts safely
+- Pull the latest target branch (`develop`) into your feature branch: `git fetch origin && git merge origin/develop` (or rebase only if your team agrees and history is not shared in a risky way).
+- Resolve conflicts file-by-file, keeping both sides' intended work where needed.
+- Do **not** delete teammates' work, do **not** force-push shared branches, and do **not** commit secrets or local runtime data.
+- Re-test after resolving conflicts, then commit the merge resolution and push.
+
 ## Safety Notes
 
 - No MongoDB connection in local-demo mode.
 - No plaintext passwords stored or exposed; secrets/tokens not logged.
 - Local runtime data: `backend/local-data/` (gitignored). Reset only via explicit script with confirmation.
 - Demo/seed data is clearly labeled where applicable.
+- Do not commit `.env` files, credentials, tokens, or local user/upload data.
